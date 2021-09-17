@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="12-june-assigment.js"></script>
+    <style>
+        body {font-family:Arial;margin:10px}
+div {margin:10px;}
+table,th,td{
+  border: 2px solid black;
+  border-collapse:collapse;
+}
+th{
+  font-weight: bold;
+  padding:7px;
+}
+td{
+  padding:5px;
+}
+
+    </style>
+</head>
+<body>
+    <h1> Add & Display Mobiles in Table </h1>
+    <div> Name <input type="text" id="mobileName"></div>
+    <div> Model <input type="text" id="model"></div>
+    <div> Price <input type="text" id="price"></div>
+    <div>
+        <input type="button" onclick="addAndDisplayMobiles()" value="Add & Display">
+    </div>
+    <table id="mobiles-table"></table>
+</body>
+</html>

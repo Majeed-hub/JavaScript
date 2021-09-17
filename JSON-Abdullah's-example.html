@@ -1,0 +1,8 @@
+<h2> JSON ASSIGNMENT </h2>
+<p id="Display"> </P>
+<script>
+  let offroadcars = '{"Cars":[ ' + '{"carName":"Lamborghini-Aventador","company":"Lamborghni"},' + '{"carName":"Buggati_Cheeron","company":"Buggati"},' +
+    '{"carName":"Mustang-GT","company":"Ford"}]}';
+  JSON_obj = JSON.parse(offroadcars);
+  document.getElementById('Display').textContent = JSON_obj.Cars[0].carName + " and company is " + JSON_obj.Cars[0].company;
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Rate</title>
+    <script src="Ticket-rate-may30.js"></script>
+</head>
+<body>
+    <h1>Ticket Fare Calculator </h1>
+    <h3>
+        This program reads age of the person and calculates the ticket fare based on following rules: </h3>
+    <ul>
+        <li> Normal ticket rates:
+            <ul>
+                <li>Mumbai - 600</li>
+                <li>Bengaluru - 450</li>
+                <li>Mangaluru - 300</li>
+                <li>Haveri - 350</li>
+            </ul>
+        </li>
+        <li> For children below 15 it is half rate (50% of normal rate)</li>
+        <li> For senior citizens above 60 it is 60% of normal rate</li>
+    </ul>
+    
+    <div>
+        Select Destination : <select name="destination" id="destination">
+            <option value=""> -- Select -- </option>
+            <option value="mumbai">Mumbai</option>
+            <option value="bengaluru">Bengaluru</option>
+            <option value="mangaluru">Mangaluru</option>
+            <option value="haveri">Haveri</option>
+        </select>
+    </div>
+    <div>
+        Select Reservation : <select name="reservation" id="reservation">
+            <option value="">---Select---</option>
+            <option value="">Normal</option>
+            <option value="">Tatkal</option>
+        </select>
+    </div>
+    
+    <div>
+        Enter your age : <input type="text" id="age" />
+    </div>
+    
+    <div>
+        <input type="button" onClick="calcFare()" Value="Calculate Fare" />
+    </div>
+    
+    <p>Your fare is Rs. <span id="fare"></span> </p>
+    
+    <p id="error-el"></p>
+    <p id="error-El"></p>
+</body>
+</html>

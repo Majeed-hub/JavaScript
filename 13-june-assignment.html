@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 june assignment</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table,th,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+<h2> Assignment - 13th June </h2>
+<p>
+    Display the quiz questions in table rows.
+    Display options as ul (unordered list) items in a td cell
+
+</p>
+<p id="display"></p>
+<script>
+    let test = '{"quiz": [{ "question": "Which one is correct team name in NBA?","options": ["New York Bulls", "Los Angeles Kings", "Golden State Warriros", "Huston Rocket" ],"answer": "Huston Rocket"}, { "question": "5 + 7 = ?","options": ["10", "11", "12", "13"],"answer": "12"},{"question": "12 - 8 = ?","options": ["1","2","3","4"],"answer": "4"}]}';
+        let Obj = JSON.parse(test);
+        let quiz_array = Obj.quiz;
+
+        let htmlData = "";
+        // let quiz_options = "";
+        // let answer = "";
+        quiz_array.forEach(myfunction);
+
+        function myfunction(q){
+            htmlData += "<tr>";
+                htmlData += "<td>" + q.question + "</td>";
+            // htmlData += "</tr>";
+
+            // htmlData += "<tr>";
+
+            htmlData += "<td>";
+                q.options.forEach(option => {
+                    htmlData += "<li>" + option + "</li>"
+                })
+            htmlData += "</td>";
+            
+             
+            htmlData += "<td>" + q.answer + "</td>"
+             htmlData += "</tr>";
+        }
+       
+        document.getElementById("display").innerHTML = "<table>" + "<tr>" + "<th>"+ "Questions" + "</th>" + "<th>" + "Options" + "</th>" + "<th>" + "Answer" + "</th>"  + "<tbody>" + htmlData + "</tbody>" +  "</table>";
+
+
+     
+</script>
+</body>
+</html>
